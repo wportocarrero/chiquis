@@ -1675,19 +1675,15 @@ h1 {
 
 .foto-lateral {
     position: absolute;
-    top: 50%;
+    top: 25%;
     width: 220px;
     height: 280px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-
     opacity: 0;
-
     transform: translateY(-50%);
-
     transition: opacity 1.5s ease-in-out;
-
     z-index: 99999;
 }
 
