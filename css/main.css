@@ -1675,7 +1675,7 @@ h1 {
 
 .foto-lateral {
     position: absolute;
-    top: 25%;
+    top: 10%;
     width: 220px;
     height: 280px;
     object-fit: cover;
