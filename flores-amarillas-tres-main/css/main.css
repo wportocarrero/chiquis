@@ -26,7 +26,7 @@ body {
   color: white;
   position: absolute;
   margin-bottom: 20%;
-  z-index: 1;
+  z-index: 9999;
   font-weight: bold;
   letter-spacing: 4px;
 }
@@ -49,6 +49,7 @@ body {
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
+  z-index: 99999;
 }
 @keyframes fadeIn {
   from {
@@ -105,6 +106,7 @@ body {
 .flowers {
   position: relative;
   transform: scale(0.9);
+  z-index: 1;
   /*margin-bottom: 100px;
   */
 }
@@ -1657,3 +1659,70 @@ h1 {
 }
 
 /* Agregar más estilos según sea necesario */
+/* ============================= */
+/* FOTOS LATERALES */
+/* ============================= */
+
+.fotos-laterales {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+.foto-lateral {
+    position: absolute;
+    top: 50%;
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+
+    transform: translateY(-50%);
+
+    transition: opacity 1.5s ease-in-out;
+
+    z-index: 99999;
+}
+
+.foto-lateral.activa {
+    opacity: 1;
+}
+
+.foto-lateral:nth-child(1) {
+    left: 5%;
+}
+
+.foto-lateral:nth-child(2) {
+    right: 5%;
+}
+
+.foto-lateral:nth-child(3) {
+    left: 5%;
+}
+
+/* Móviles */
+
+@media only screen and (max-width: 600px) {
+
+    .foto-lateral {
+        width: 100px;
+        height: 140px;
+    }
+
+    .foto-lateral:nth-child(1),
+    .foto-lateral:nth-child(3) {
+        left: 2%;
+    }
+
+    .foto-lateral:nth-child(2) {
+        right: 2%;
+    }
+}
+
